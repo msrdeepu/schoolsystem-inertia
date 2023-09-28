@@ -80,6 +80,15 @@ export default function Authenticated({ header, children }) {
                                 </Link>
                             ),
                         },
+                        {
+                            key: "studentslist",
+                            icon: <UserOutlined />,
+                            label: (
+                                <Link href={window.route("students.index")}>
+                                    Students
+                                </Link>
+                            ),
+                        },
                     ]}
                 />
             </Sider>
