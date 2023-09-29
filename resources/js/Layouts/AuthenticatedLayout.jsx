@@ -7,6 +7,7 @@ import {
     UserOutlined,
     LogoutOutlined,
     DownOutlined,
+    MacCommandOutlined,
 } from "@ant-design/icons";
 import {
     Col,
@@ -73,7 +74,7 @@ export default function Authenticated({ header, children }) {
                     items={[
                         {
                             key: "dashboard",
-                            icon: <UserOutlined />,
+                            icon: <MacCommandOutlined />,
                             label: (
                                 <Link href={window.route("dashboard")}>
                                     Dashboard

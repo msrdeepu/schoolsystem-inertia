@@ -1,14 +1,23 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head } from "@inertiajs/react";
+import { Head, router } from "@inertiajs/react";
 import { Card, Typography } from "antd";
+import Studentform from "./Studentform";
 
-function Createstudent(props) {
+function Createstudent({ props }) {
+    //submi Form Handler
+    const formSubmitHandler = (values) => {
+        console.log("Hello");
+    };
+
     return (
         <>
             <Head title="Dashboard" />
 
-            <Card title={`Welcome, ${props.auth.user.name}`}>
-                <Typography.Text>Create Student</Typography.Text>
+            <Card title={`Add Student `}>
+                <Studentform
+                    submitForm={formSubmitHandler}
+                    saveButton={"Save"}
+                />
             </Card>
         </>
     );
